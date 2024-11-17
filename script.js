@@ -5,14 +5,14 @@ const present = document.getElementById("present");
 const song = document.getElementById("birthdaySong");
 const openLetterButton = document.querySelector(".letter-tab button");
 const letterContent = document.getElementById("letterContent");
-const imagesContainer = document.getElementById("imagesContainer"); // Added for images
+const imagesContainer = document.getElementById("imagesContainer"); 
 
-// Disable the "Open Your Letter" button initially
+
 openLetterButton.disabled = true;
 
 function countdownToBirthday() {
-  // Set the correct birthday time in UTC
-  const birthday = new Date("2024-11-17T05:00:00Z"); // Adjust as needed for timezone
+
+  const birthday = new Date("2024-11-17T05:00:00Z"); // est 
 
   const now = new Date();
   const timeDiff = birthday - now;
@@ -20,7 +20,7 @@ function countdownToBirthday() {
   if (timeDiff <= 0) {
     countdownElement.textContent = "Happy 21st Saigeypoo!";
     showBirthdayMessage();
-    // Enable the "Open Your Letter" button
+
     openLetterButton.disabled = false;
   } else {
     const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -33,22 +33,20 @@ function countdownToBirthday() {
 }
 
 function showBirthdayMessage() {
-  // Display birthday elements
   birthdayMessage.classList.remove("hidden");
   heart.classList.remove("hidden");
   present.classList.add("open");
   song.play();
 
-  // Trigger confetti (only once)
   confetti({
-    particleCount: 150, // Adjust the number of particles for a bigger burst
-    startVelocity: 40,  // Adjust speed of the confetti particles
-    spread: 360,        // Spread the confetti in all directions
+    particleCount: 150,
+    startVelocity: 40,
+    spread: 360,
     origin: {
-      x: 0.5,  // Centered horizontally
-      y: 0.5,  // Centered vertically
+      x: 0.5,  
+      y: 0.5,  
     },
-    colors: ["#ff69b4", "#ff1493", "#ffc0cb", "#ffffff"], // Color palette
+    colors: ["#ff69b4", "#ff1493", "#ffc0cb", "#ffffff"], 
   });
 }
 
@@ -56,12 +54,10 @@ function openLetter() {
   if (!openLetterButton.disabled) {
     letterContent.classList.toggle("hidden");
 
-    // Show images after the letter is opened
     if (!letterContent.classList.contains("hidden")) {
       imagesContainer.classList.remove("hidden");
     }
   }
 }
 
-// Update countdown every second
 setInterval(countdownToBirthday, 1000);

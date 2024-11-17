@@ -7,10 +7,9 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
-    /* Inline styles for visuals (move to styles.css) */
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #EADDCA; /* Light brown */
+      background-color: #EADDCA; 
       color: #333;
       margin: 0;
       padding: 0;
@@ -25,19 +24,19 @@
 
     #countdown_message {
       font-size: 1.5rem;
-      color: #e63946; /* Light red */
+      color: #e63946; 
       margin-bottom: 10px;
     }
 
     #countdown {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #e63946; /* Light red */
+      color: #e63946; 
     }
 
     .heart {
       font-size: 4rem;
-      color: #ff6f91; /* Soft pink */
+      color: #ff6f91; 
       margin: 10px 0;
     }
 
@@ -46,10 +45,10 @@
       position: relative;
       width: 150px;
       height: 150px;
-      background-color: #f4a261; /* Light brown */
+      background-color: #f4a261; 
       border-radius: 10px;
       margin: 20px 0;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow to give depth */
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
     }
 
     .lid {
@@ -57,29 +56,29 @@
       top: 0;
       width: 100%;
       height: 30px;
-      background-color: #e63946; /* Light red */
+      background-color: #e63946; 
       border-radius: 10px 10px 0 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for lid */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     }
 
     .box {
       position: absolute;
-      top: 30px; /* Start below the lid */
+      top: 30px;
       width: 100%;
       height: 120px;
-      background-color: #f1faee; /* Very light pink */
+      background-color: #f1faee; 
       border-radius: 0 0 10px 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for the box */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     }
 
     .ribbon {
       position: absolute;
-      top: 55px; /* Positioning ribbon in the middle of the box */
+      top: 55px; 
       left: 0;
       width: 100%;
       height: 20px;
-      background-color: #ff6f91; /* Soft pink */
-      border-radius: 5px; /* Slight rounded corners for the ribbon */
+      background-color: #ff6f91; 
+      border-radius: 5px;
     }
 
     .ribbon:before {
@@ -89,7 +88,7 @@
       left: 50%;
       width: 10px;
       height: 10px;
-      background-color: #ff6f91; /* Ribbon knot */
+      background-color: #ff6f91; 
       border-radius: 50%;
       transform: translateX(-50%);
     }
@@ -109,7 +108,7 @@
     #birthdayMessage {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #e63946; /* Light red */
+      color: #e63946; 
       margin-top: 20px;
     }
 
@@ -118,7 +117,7 @@
     }
 
     .letter-tab button {
-      background-color: #f4a261; /* Light brown */
+      background-color: #f4a261; 
       color: white;
       font-size: 1rem;
       padding: 10px 20px;
@@ -129,13 +128,13 @@
     }
 
     .letter-tab button:hover {
-      background-color: #e63946; /* Light red */
+      background-color: #e63946;
     }
 
     #letterContent {
       margin-top: 15px;
       padding: 15px;
-      border: 2px solid #f4a261; /* Light brown */
+      border: 2px solid #f4a261;
       border-radius: 10px;
       background-color: #fff0f5;
       font-size: 1rem;
